@@ -29,75 +29,70 @@
                                     <constraint firstAttribute="width" constant="260" id="6Wf-Uw-Uug"/>
                                     <constraint firstAttribute="height" constant="50" id="Dez-9M-7FM"/>
                                 </constraints>
-                                <color key="tintColor" systemColor="systemRedColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" systemColor="systemRedColor"/>
-                                    </backgroundConfiguration>
+                                <buttonConfiguration key="configuration" style="filled" image="stop.circle" catalog="system" imagePadding="5">
+                                    <backgroundConfiguration key="background"/>
                                     <attributedString key="attributedTitle">
                                         <fragment content="Stop!">
                                             <attributes>
                                                 <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                <font key="NSFont" size="23" name="ArialRoundedMTBold"/>
+                                                <font key="NSFont" size="18" name="ArialRoundedMTBold"/>
                                                 <font key="NSOriginalFont" size="12" name="Helvetica"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" systemColor="systemRedColor"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="stopButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YqH-QR-9Lk"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IWl-xt-89h">
-                                <rect key="frame" x="66.666666666666671" y="641" width="115.00000000000001" height="50"/>
+                                <rect key="frame" x="66.666666666666671" y="641" width="120.00000000000001" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="NNy-Lk-TMV"/>
-                                    <constraint firstAttribute="width" constant="115" id="U9s-tO-gsL"/>
+                                    <constraint firstAttribute="width" constant="120" id="U9s-tO-gsL"/>
                                 </constraints>
-                                <color key="tintColor" systemColor="systemGreenColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                    </backgroundConfiguration>
+                                <buttonConfiguration key="configuration" style="filled" image="arrow.clockwise.circle" catalog="system" imagePadding="5">
+                                    <backgroundConfiguration key="background"/>
                                     <attributedString key="attributedTitle">
                                         <fragment content="Restart">
                                             <attributes>
-                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                <font key="NSFont" size="24" name="ArialRoundedMTBold"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                <font key="NSFont" size="18" name="ArialRoundedMTBold"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="restartButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cGk-Y8-VDt"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oZs-2C-evA">
-                                <rect key="frame" x="211.66666666666663" y="641" width="115" height="50"/>
+                                <rect key="frame" x="206.66666666666663" y="641" width="120" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="azi-Xa-IHC"/>
-                                    <constraint firstAttribute="width" constant="115" id="yN0-5H-95R"/>
+                                    <constraint firstAttribute="width" constant="120" id="yN0-5H-95R"/>
                                 </constraints>
                                 <color key="tintColor" systemColor="systemBlueColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                    </backgroundConfiguration>
+                                <buttonConfiguration key="configuration" style="filled" image="list.bullet.clipboard" catalog="system" imagePadding="5">
+                                    <backgroundConfiguration key="background"/>
                                     <attributedString key="attributedTitle">
                                         <fragment content="Rules">
                                             <attributes>
-                                                <font key="NSFont" size="24" name="ArialRoundedMTBold"/>
+                                                <font key="NSFont" size="18" name="ArialRoundedMTBold"/>
                                                 <font key="NSOriginalFont" size="12" name="Helvetica"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" systemColor="systemBlueColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="rulesButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UHW-7Y-mO2"/>
                                     <segue destination="erm-wM-k6H" kind="presentation" id="Ah9-wK-C11"/>
                                 </connections>
                             </button>
@@ -137,23 +132,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rules" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdT-GB-ufp">
-                                <rect key="frame" x="30" y="60" width="360" height="48"/>
+                                <rect key="frame" x="30" y="60" width="333" height="48"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The value of each card represents the number of exercise you do.  J=11, Q=12, K=13, A=14" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MO0-DF-KdF">
-                                <rect key="frame" x="30" y="128" width="360" height="86"/>
+                                <rect key="frame" x="30" y="128" width="333" height="86"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="♠️ = Push-up  ❤️ = Sit-up  ♣️ = Burpees  ♦️ = Jumping Jacks" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="24s-7b-u2E">
-                                <rect key="frame" x="110" y="289" width="200" height="175.66666666666663"/>
+                                <rect key="frame" x="100" y="289" width="193" height="175.66666666666663"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="Mpc-W2-3CZ" userLabel="width ≥ 220"/>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="jva-Zd-o47"/>
-                                    <constraint firstAttribute="width" constant="200" id="uPE-tP-g6w"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="220" id="c6j-dm-jSu"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
                                 <nil key="textColor"/>
@@ -164,15 +157,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="24s-7b-u2E" firstAttribute="top" secondItem="MO0-DF-KdF" secondAttribute="bottom" constant="75" id="3X8-lj-ggI"/>
-                            <constraint firstAttribute="trailing" secondItem="24s-7b-u2E" secondAttribute="trailing" constant="110" id="8M0-Mx-vAX"/>
                             <constraint firstItem="tdT-GB-ufp" firstAttribute="top" secondItem="UN8-B8-NxG" secondAttribute="top" constant="60" id="9QB-S2-hnR"/>
                             <constraint firstItem="MO0-DF-KdF" firstAttribute="top" secondItem="tdT-GB-ufp" secondAttribute="bottom" constant="20" id="AKr-w0-wdr"/>
                             <constraint firstItem="MO0-DF-KdF" firstAttribute="leading" secondItem="UN8-B8-NxG" secondAttribute="leading" constant="30" id="Auy-gE-L62"/>
-                            <constraint firstItem="24s-7b-u2E" firstAttribute="leading" secondItem="UN8-B8-NxG" secondAttribute="leading" constant="110" id="Mmg-DD-OUy"/>
-                            <constraint firstItem="UN8-B8-NxG" firstAttribute="trailing" secondItem="24s-7b-u2E" secondAttribute="trailing" constant="110" id="SGe-a3-oTa"/>
                             <constraint firstItem="UN8-B8-NxG" firstAttribute="trailing" secondItem="tdT-GB-ufp" secondAttribute="trailing" constant="30" id="Tmc-UO-wR0"/>
                             <constraint firstItem="UN8-B8-NxG" firstAttribute="trailing" secondItem="MO0-DF-KdF" secondAttribute="trailing" constant="30" id="b2z-Y3-0Hm"/>
                             <constraint firstItem="tdT-GB-ufp" firstAttribute="leading" secondItem="UN8-B8-NxG" secondAttribute="leading" constant="30" id="cEu-3V-myG"/>
+                            <constraint firstItem="24s-7b-u2E" firstAttribute="centerX" secondItem="ABB-Vt-hyX" secondAttribute="centerX" id="eJG-yO-z36"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -183,6 +174,9 @@
     </scenes>
     <resources>
         <image name="QH" width="691" height="1056"/>
+        <image name="arrow.clockwise.circle" catalog="system" width="128" height="123"/>
+        <image name="list.bullet.clipboard" catalog="system" width="103" height="128"/>
+        <image name="stop.circle" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

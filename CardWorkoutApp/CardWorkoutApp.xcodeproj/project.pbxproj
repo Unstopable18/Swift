@@ -13,6 +13,7 @@
 		E75FA0922AB0731F00E14BC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E75FA0912AB0731F00E14BC1 /* Assets.xcassets */; };
 		E75FA0952AB0731F00E14BC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E75FA0932AB0731F00E14BC1 /* LaunchScreen.storyboard */; };
 		E75FA09D2AB0764900E14BC1 /* CardSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75FA09C2AB0764900E14BC1 /* CardSelectionViewController.swift */; };
+		E78436EE2AB195290013E7FE /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78436ED2AB195280013E7FE /* Card.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		E75FA0942AB0731F00E14BC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E75FA0962AB0731F00E14BC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E75FA09C2AB0764900E14BC1 /* CardSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSelectionViewController.swift; sourceTree = "<group>"; };
+		E78436ED2AB195280013E7FE /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				E75FA0882AB0731D00E14BC1 /* AppDelegate.swift */,
 				E75FA08A2AB0731D00E14BC1 /* SceneDelegate.swift */,
+				E78436ED2AB195280013E7FE /* Card.swift */,
 				E75FA09C2AB0764900E14BC1 /* CardSelectionViewController.swift */,
 				E75FA08E2AB0731D00E14BC1 /* Main.storyboard */,
 				E75FA0912AB0731F00E14BC1 /* Assets.xcassets */,
@@ -141,6 +144,7 @@
 				E75FA0892AB0731D00E14BC1 /* AppDelegate.swift in Sources */,
 				E75FA08B2AB0731D00E14BC1 /* SceneDelegate.swift in Sources */,
 				E75FA09D2AB0764900E14BC1 /* CardSelectionViewController.swift in Sources */,
+				E78436EE2AB195290013E7FE /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
