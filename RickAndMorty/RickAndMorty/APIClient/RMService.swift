@@ -13,7 +13,11 @@ final class RMService{
         
     }
     
-    public func execute(_ request: RMRequest, completing: @escaping () -> Void){
+    public func execute<T:Codable>(
+        _ request: RMRequest,
+        expecting type: T.Type,
+        completing: @escaping (Result<T, Error>) -> Void
+    ){
         
     }
 }
