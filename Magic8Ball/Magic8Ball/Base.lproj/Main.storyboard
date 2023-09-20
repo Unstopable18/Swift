@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Magic8Ball" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FTU-Vg-pWm">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ASK ME ANYTHING" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAf-SS-eYJ">
+                                <rect key="frame" x="33.666666666666657" y="154.66666666666666" width="326" height="43"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="ball1" translatesAutoresizingMaskIntoConstraints="NO" id="Jap-AW-3Xy">
+                                <rect key="frame" x="44" y="289.66666666666669" width="305" height="273.00000000000006"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jUa-43-jwu">
+                                <rect key="frame" x="112.33333333333333" y="643" width="168.66666666666669" height="66"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="ANSWER" buttonSize="large">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
+                                    <color key="baseBackgroundColor" red="0.14635769130000001" green="0.48531753109999998" blue="0.65446133959999997" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="answerButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iKf-V5-Z9C"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NUF-wm-PhF"/>
+                        <color key="backgroundColor" red="0.087087707060000005" green="0.084718143649999994" blue="0.20427167230000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="jUa-43-jwu" firstAttribute="centerY" secondItem="FTU-Vg-pWm" secondAttribute="centerY" constant="250" id="1AG-B2-YMs"/>
+                            <constraint firstItem="bAf-SS-eYJ" firstAttribute="centerY" secondItem="FTU-Vg-pWm" secondAttribute="centerY" constant="-250" id="HjC-YX-4Sy"/>
+                            <constraint firstItem="Jap-AW-3Xy" firstAttribute="centerY" secondItem="FTU-Vg-pWm" secondAttribute="centerY" id="LQg-95-9ns"/>
+                            <constraint firstItem="jUa-43-jwu" firstAttribute="centerX" secondItem="FTU-Vg-pWm" secondAttribute="centerX" id="MIg-oj-Quq"/>
+                            <constraint firstItem="Jap-AW-3Xy" firstAttribute="centerX" secondItem="FTU-Vg-pWm" secondAttribute="centerX" id="dg2-gE-Wgw"/>
+                            <constraint firstItem="bAf-SS-eYJ" firstAttribute="centerX" secondItem="FTU-Vg-pWm" secondAttribute="centerX" id="e8O-ft-OzC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="magicImage" destination="Jap-AW-3Xy" id="Qv4-6l-7Y7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="-34"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ball1" width="305" height="273.66665649414062"/>
+    </resources>
+</document>
