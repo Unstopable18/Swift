@@ -6,6 +6,7 @@
 //
 
 import Foundation
+
 struct QuestionBoolean {
     let question: String
     let answer: String
