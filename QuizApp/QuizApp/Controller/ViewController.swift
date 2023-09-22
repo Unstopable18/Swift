@@ -11,11 +11,12 @@ import Foundation
 class ViewController: UIViewController {
 
     @IBOutlet weak var queLable: UILabel!
-    @IBOutlet weak var trueButton: UIButton!
-    @IBOutlet weak var falseButton: UIButton!
+    @IBOutlet weak var option2Button: UIButton!
+    @IBOutlet weak var option3Button: UIButton!
+    @IBOutlet weak var option1Button: UIButton!
     @IBOutlet weak var progressBar: UIProgressView!
     @IBOutlet weak var scoreLable: UILabel!
-    var questions=Question.allValues
+    var questions=QuestionMultiple.allValues
     var questionNo=0
     var score=0
     var timer:Timer!
@@ -24,7 +25,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
-        defaultBackgrounButton=trueButton.backgroundColor
+        defaultBackgrounButton=option2Button.backgroundColor
         // Do any additional setup after loading the view.
     }
 
@@ -33,9 +34,9 @@ class ViewController: UIViewController {
             if userAns == "Retake" {
                 questionNo = -1
                 score = 0
-            } else if userAns!.hasPrefix("Your Score is") {
+            } else if userAns!.hasPrefix("Your Score is") || userAns!.hasPrefix("Test Complete"){
                 questionNo -= 1
-            } else if userAns == questions[questionNo].answer {
+            } else if userAns == questions[questionNo].correctAnswer {
                 score += 1
                 sender.backgroundColor = UIColor.green
             } else {
@@ -48,8 +49,9 @@ class ViewController: UIViewController {
     }
 
     @objc func updateUI(){
-        trueButton.backgroundColor = defaultBackgrounButton
-        falseButton.backgroundColor = defaultBackgrounButton
+        option1Button.backgroundColor = defaultBackgrounButton
+        option2Button.backgroundColor = defaultBackgrounButton
+        option3Button.backgroundColor = defaultBackgrounButton
         let progress = Float(questionNo) / Float(questions.count)
         progressBar.setProgress(progress, animated: true)
         if questionNo==questions.count{
@@ -60,17 +62,18 @@ class ViewController: UIViewController {
     }
     
     func quizFinish(){
-        queLable.text="Test Complete!!!"
-        trueButton.setTitle("Your Score is \(score)", for: .normal)
-        falseButton.setTitle("Retake", for: .normal)
+        queLable.text=""
+        option1Button.setTitle("Test Complete!!!", for: .normal)
+        option2Button.setTitle("Your Score is \(score)", for: .normal)
+        option3Button.setTitle("Retake", for: .normal)
         scoreLable.text=""
     }
     
     func setQuiz(){
-        
-        trueButton.setTitle("TRUE", for: .normal)
-        falseButton.setTitle("FALSE", for: .normal)
-        queLable.text=questions[questionNo].text
+        option1Button.setTitle(questions[questionNo].answer[0], for: .normal)
+        option2Button.setTitle(questions[questionNo].answer[1], for: .normal)
+        option3Button.setTitle(questions[questionNo].answer[2], for: .normal)
+        queLable.text=questions[questionNo].question
         scoreLable.text=String(score)
         
     }
