@@ -6,11 +6,12 @@
 //
 
 import Foundation
-
-struct Question{
+struct Question {
     let text: String
     let answer: String
-    
+}
+
+extension Question {
     static var allValues=[
         Question(text: "A slug's blood is green.", answer: "TRUE"),
         Question(text: "Approximately one quarter of human bones are in the feet.", answer: "TRUE"),

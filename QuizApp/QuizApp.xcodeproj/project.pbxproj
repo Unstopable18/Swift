@@ -39,6 +39,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E7032DEF2ABD79EC00C6C114 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E7A1DFA02ABC5F6F007ADDB0 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E7032DF02ABD7A0300C6C114 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E7A1DFA22ABC5F6F007ADDB0 /* Main.storyboard */,
+				E7A1DFA72ABC5F72007ADDB0 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E7032DF12ABD7A1300C6C114 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E7A1DFB02ABC6D9F007ADDB0 /* Questions.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		E7A1DF902ABC5F6F007ADDB0 = {
 			isa = PBXGroup;
 			children = (
@@ -60,11 +85,10 @@
 			children = (
 				E7A1DF9C2ABC5F6F007ADDB0 /* AppDelegate.swift */,
 				E7A1DF9E2ABC5F6F007ADDB0 /* SceneDelegate.swift */,
-				E7A1DFB02ABC6D9F007ADDB0 /* Questions.swift */,
-				E7A1DFA02ABC5F6F007ADDB0 /* ViewController.swift */,
-				E7A1DFA22ABC5F6F007ADDB0 /* Main.storyboard */,
+				E7032DF12ABD7A1300C6C114 /* Model */,
+				E7032DEF2ABD79EC00C6C114 /* Controller */,
+				E7032DF02ABD7A0300C6C114 /* View */,
 				E7A1DFA52ABC5F72007ADDB0 /* Assets.xcassets */,
-				E7A1DFA72ABC5F72007ADDB0 /* LaunchScreen.storyboard */,
 				E7A1DFAA2ABC5F72007ADDB0 /* Info.plist */,
 			);
 			path = QuizApp;
