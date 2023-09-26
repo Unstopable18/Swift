@@ -34,7 +34,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="IfU-7c-HMK">
                                                 <rect key="frame" x="0.0" y="56" width="353" height="54"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Rb-PV-G2u">
+                                                    <button opaque="NO" contentMode="scaleAspectFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Rb-PV-G2u">
                                                         <rect key="frame" x="0.0" y="0.0" width="95.333333333333329" height="54"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="7U1-9c-Cmd"/>
@@ -49,7 +49,7 @@
                                                             <action selector="TipButtonPressed:" destination="JzR-Hx-BVG" eventType="touchUpInside" id="d13-MM-bCx"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTs-I0-FTa">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTs-I0-FTa">
                                                         <rect key="frame" x="95.333333333333329" y="0.0" width="162.33333333333337" height="54"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="54" id="sDt-zA-sIB"/>
@@ -205,6 +205,9 @@
                         <outlet property="Tip0Button" destination="2Rb-PV-G2u" id="wbs-1a-urr"/>
                         <outlet property="Tip10Button" destination="oTs-I0-FTa" id="6Sn-9s-VbU"/>
                         <outlet property="Tip20Button" destination="WRq-hg-OLR" id="rDs-rc-elN"/>
+                        <outletCollection property="tipButtons" destination="2Rb-PV-G2u" collectionClass="NSMutableArray" id="TmJ-1n-jDB"/>
+                        <outletCollection property="tipButtons" destination="oTs-I0-FTa" collectionClass="NSMutableArray" id="FhD-X5-76z"/>
+                        <outletCollection property="tipButtons" destination="WRq-hg-OLR" collectionClass="NSMutableArray" id="rsY-u3-cf1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VbI-aF-kwH" sceneMemberID="firstResponder"/>
@@ -266,6 +269,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10f"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="recalculateButtonTapped:" destination="klw-Dd-OMH" eventType="touchUpInside" id="hvY-9a-Ce7"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Split between 2 people, with 10% tip." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sxe-vk-Szv">
                                 <rect key="frame" x="50" y="305" width="293" height="117"/>
@@ -291,6 +297,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rXS-LR-KvY"/>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="Sxe-vk-Szv" id="tef-tn-rU8"/>
+                        <outlet property="shareLabel" destination="gfV-hR-fZG" id="7xM-hZ-edW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Av-H2-5KN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

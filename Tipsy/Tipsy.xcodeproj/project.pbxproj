@@ -14,6 +14,7 @@
 		E793B9442AC1A319001ABF45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E793B9432AC1A319001ABF45 /* Assets.xcassets */; };
 		E793B9472AC1A31A001ABF45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E793B9452AC1A31A001ABF45 /* LaunchScreen.storyboard */; };
 		E793B94F2AC1A654001ABF45 /* TipsyResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E793B94E2AC1A654001ABF45 /* TipsyResultViewController.swift */; };
+		E7C5A1D32AC2C04300AEF7A9 /* TipsyBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C5A1D22AC2C04300AEF7A9 /* TipsyBrain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		E793B9462AC1A31A001ABF45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E793B9482AC1A31A001ABF45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E793B94E2AC1A654001ABF45 /* TipsyResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsyResultViewController.swift; sourceTree = "<group>"; };
+		E7C5A1D22AC2C04300AEF7A9 /* TipsyBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsyBrain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,14 +62,39 @@
 			children = (
 				E793B93A2AC1A317001ABF45 /* AppDelegate.swift */,
 				E793B93C2AC1A317001ABF45 /* SceneDelegate.swift */,
-				E793B93E2AC1A317001ABF45 /* ViewController.swift */,
-				E793B94E2AC1A654001ABF45 /* TipsyResultViewController.swift */,
-				E793B9402AC1A317001ABF45 /* Main.storyboard */,
-				E793B9452AC1A31A001ABF45 /* LaunchScreen.storyboard */,
+				E7C5A1D42AC2C05F00AEF7A9 /* Model */,
+				E7C5A1D62AC2C08300AEF7A9 /* View */,
+				E7C5A1D52AC2C06900AEF7A9 /* Controller */,
 				E793B9432AC1A319001ABF45 /* Assets.xcassets */,
 				E793B9482AC1A31A001ABF45 /* Info.plist */,
 			);
 			path = Tipsy;
+			sourceTree = "<group>";
+		};
+		E7C5A1D42AC2C05F00AEF7A9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E7C5A1D22AC2C04300AEF7A9 /* TipsyBrain.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E7C5A1D52AC2C06900AEF7A9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E793B93E2AC1A317001ABF45 /* ViewController.swift */,
+				E793B94E2AC1A654001ABF45 /* TipsyResultViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E7C5A1D62AC2C08300AEF7A9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E793B9452AC1A31A001ABF45 /* LaunchScreen.storyboard */,
+				E793B9402AC1A317001ABF45 /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +170,7 @@
 			files = (
 				E793B93F2AC1A317001ABF45 /* ViewController.swift in Sources */,
 				E793B94F2AC1A654001ABF45 /* TipsyResultViewController.swift in Sources */,
+				E7C5A1D32AC2C04300AEF7A9 /* TipsyBrain.swift in Sources */,
 				E793B93B2AC1A317001ABF45 /* AppDelegate.swift in Sources */,
 				E793B93D2AC1A317001ABF45 /* SceneDelegate.swift in Sources */,
 			);
