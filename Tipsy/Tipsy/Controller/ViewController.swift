@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var BillValueLabel: UITextField!
     @IBOutlet weak var SplitLabel: UILabel!
     @IBOutlet weak var Tip20Button: UIButton!
@@ -26,24 +26,51 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        BillValueLabel.delegate=self
         
     }
     
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+
+        let currentText = (textField.text ?? "") as NSString
+        
+        let newText = currentText.replacingCharacters(in: range, with: string)
+
+        if newText.isEmpty {
+            return true
+        } else {
+
+            let decimalSeparator = Locale.current.decimalSeparator ?? "."
+            let decimalSeparatorCount = newText.components(separatedBy: decimalSeparator).count - 1
+            
+            if decimalSeparatorCount > 1 {
+                return false
+            }
+            
+            if (Float(newText) != nil) {
+                return true
+            } else {
+                return false
+            }
+        }
+    }
+    
+//    touches outside the UITextField
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
 
     @IBAction func CalculateSplitButtonTapped(_ sender: UIButton) {
-        BillValueLabel.endEditing(true)
         totalBill   = model.getTotalBill(totalBill: BillValueLabel.text ?? "0")
         split       = model.getSplit(split: SplitLabel.text ?? "2")
-//        print("totalBill: \(totalBill), tip: \(tip), split: (split)")
-        share       = model.getShare(totalBill: totalBill, tip: tip, split: split)
-        
+        print("From View Controller   totalBill: \(totalBill), tip: \(tip), split: \(split)")
+        tip                     = model.getTip(tip: tipPer )
         self.performSegue(withIdentifier: "goToSplit", sender: self)
     }
     
+    
+    
     @IBAction func TipButtonPressed(_ sender: UIButton) {
-        
-        BillValueLabel.endEditing(true)
- 
         Tip0Button.isSelected   = false
         Tip10Button.isSelected  = false
         Tip20Button.isSelected  = false
@@ -55,7 +82,6 @@ class ViewController: UIViewController {
     }
     
     @IBAction func StepperChanged(_ sender: UIStepper) {
-        BillValueLabel.endEditing(true)
         SplitLabel.text         = model.setSplit(split: sender.value)
     }
     
@@ -65,7 +91,7 @@ class ViewController: UIViewController {
             let destinationVC       = segue.destination as! TipsyResultViewController
             destinationVC.tipPer    = tipPer
             destinationVC.split     = model.setSplit(split: split)
-            destinationVC.share     = share
+            destinationVC.share     = model.getShare(totalBill: totalBill, tip: tip, split: split)
         }
     }
 }

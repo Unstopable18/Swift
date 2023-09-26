@@ -155,7 +155,7 @@
                                         </constraints>
                                         <color key="textColor" red="0.3638904637" green="0.56505355940000002" blue="0.67978346349999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="go"/>
                                     </textField>
                                 </subviews>
                                 <constraints>

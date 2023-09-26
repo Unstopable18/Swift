@@ -41,7 +41,8 @@ struct TipsyBrain{
     
     func getShare(totalBill:Float,tip:Float,split:Float)->String{
         let share = (totalBill * tip)/split
-//        print(share)
+        print("From Model    totalBill: \(totalBill), tip: \(tip), split: \(split)")
+        print(share)
         return String(format: "%.2f",share)
     }
 }
