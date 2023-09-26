@@ -13,6 +13,8 @@
 		E7C5A1EB2AC2EE6900AEF7A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7C5A1E92AC2EE6900AEF7A9 /* Main.storyboard */; };
 		E7C5A1ED2AC2EE6C00AEF7A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7C5A1EC2AC2EE6C00AEF7A9 /* Assets.xcassets */; };
 		E7C5A1F02AC2EE6C00AEF7A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7C5A1EE2AC2EE6C00AEF7A9 /* LaunchScreen.storyboard */; };
+		E7C5A1F92AC2F0A600AEF7A9 /* dark_background.pdf in Resources */ = {isa = PBXBuildFile; fileRef = E7C5A1F72AC2F0A600AEF7A9 /* dark_background.pdf */; };
+		E7C5A1FA2AC2F0A600AEF7A9 /* light_background.pdf in Resources */ = {isa = PBXBuildFile; fileRef = E7C5A1F82AC2F0A600AEF7A9 /* light_background.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		E7C5A1EC2AC2EE6C00AEF7A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E7C5A1EF2AC2EE6C00AEF7A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E7C5A1F12AC2EE6C00AEF7A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7C5A1F72AC2F0A600AEF7A9 /* dark_background.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = dark_background.pdf; sourceTree = "<group>"; };
+		E7C5A1F82AC2F0A600AEF7A9 /* light_background.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = light_background.pdf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +64,11 @@
 				E7C5A1E52AC2EE6900AEF7A9 /* SceneDelegate.swift */,
 				E7C5A1E72AC2EE6900AEF7A9 /* ViewController.swift */,
 				E7C5A1E92AC2EE6900AEF7A9 /* Main.storyboard */,
-				E7C5A1EC2AC2EE6C00AEF7A9 /* Assets.xcassets */,
 				E7C5A1EE2AC2EE6C00AEF7A9 /* LaunchScreen.storyboard */,
+				E7C5A1EC2AC2EE6C00AEF7A9 /* Assets.xcassets */,
 				E7C5A1F12AC2EE6C00AEF7A9 /* Info.plist */,
+				E7C5A1F72AC2F0A600AEF7A9 /* dark_background.pdf */,
+				E7C5A1F82AC2F0A600AEF7A9 /* light_background.pdf */,
 			);
 			path = Clima;
 			sourceTree = "<group>";
@@ -125,6 +131,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7C5A1FA2AC2F0A600AEF7A9 /* light_background.pdf in Resources */,
+				E7C5A1F92AC2F0A600AEF7A9 /* dark_background.pdf in Resources */,
 				E7C5A1F02AC2EE6C00AEF7A9 /* LaunchScreen.storyboard in Resources */,
 				E7C5A1ED2AC2EE6C00AEF7A9 /* Assets.xcassets in Resources */,
 				E7C5A1EB2AC2EE6900AEF7A9 /* Main.storyboard in Resources */,
@@ -218,7 +226,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -275,7 +283,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -305,7 +313,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.swiftPractical.Clima;
+				PRODUCT_BUNDLE_IDENTIFIER = com.swiftPractical.QuizApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -333,7 +341,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.swiftPractical.Clima;
+				PRODUCT_BUNDLE_IDENTIFIER = com.swiftPractical.QuizApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
