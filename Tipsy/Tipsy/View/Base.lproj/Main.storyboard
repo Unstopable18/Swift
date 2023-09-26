@@ -205,9 +205,6 @@
                         <outlet property="Tip0Button" destination="2Rb-PV-G2u" id="wbs-1a-urr"/>
                         <outlet property="Tip10Button" destination="oTs-I0-FTa" id="6Sn-9s-VbU"/>
                         <outlet property="Tip20Button" destination="WRq-hg-OLR" id="rDs-rc-elN"/>
-                        <outletCollection property="tipButtons" destination="2Rb-PV-G2u" collectionClass="NSMutableArray" id="TmJ-1n-jDB"/>
-                        <outletCollection property="tipButtons" destination="oTs-I0-FTa" collectionClass="NSMutableArray" id="FhD-X5-76z"/>
-                        <outletCollection property="tipButtons" destination="WRq-hg-OLR" collectionClass="NSMutableArray" id="rsY-u3-cf1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VbI-aF-kwH" sceneMemberID="firstResponder"/>

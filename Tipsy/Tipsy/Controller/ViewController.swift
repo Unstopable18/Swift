@@ -14,7 +14,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var Tip10Button: UIButton!
     @IBOutlet weak var Tip0Button: UIButton!
     
-    @IBOutlet var tipButtons: [UIButton]!
     
     var totalBill:Float = 0.0
     var tipPer:String   = "0%"
@@ -77,7 +76,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         sender.isSelected       = true
         tipPer                  = sender.currentTitle ?? "0%"
-        tip                     = model.getTip(tip: tipPer )
         
     }
     
