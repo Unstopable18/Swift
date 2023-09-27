@@ -15,11 +15,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var Tip0Button: UIButton!
     
     
-    var totalBill:Float = 0.0
+    var totalBill:Double = 0
     var tipPer:String   = "0%"
-    var split:Float     = 2
+    var split:Double     = 2
     var share:String    = ""
-    var tip:Float       = 0.0
+    var tip:Double       = 0
     
     var model=TipsyBrain()
     
@@ -46,7 +46,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 return false
             }
             
-            if (Float(newText) != nil) {
+            if (Double(newText) != nil) {
                 return true
             } else {
                 return false
@@ -62,8 +62,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBAction func CalculateSplitButtonTapped(_ sender: UIButton) {
         totalBill   = model.getTotalBill(totalBill: BillValueLabel.text ?? "0")
         split       = model.getSplit(split: SplitLabel.text ?? "2")
-        print("From View Controller   totalBill: \(totalBill), tip: \(tip), split: \(split)")
-        tip                     = model.getTip(tip: tipPer )
+        tip         = model.getTip(tip: tipPer )
         self.performSegue(withIdentifier: "goToSplit", sender: self)
     }
     
