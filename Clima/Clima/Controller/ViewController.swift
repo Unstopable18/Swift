@@ -10,7 +10,6 @@ import CoreLocation
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var currentLocationButton: UIButton!
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var weatherImage: UIImageView!
@@ -20,18 +19,51 @@ class ViewController: UIViewController {
     var weatherManager = WeatherManager()
     var locationManager = CLLocationManager()
     
+//    var startTime: Date?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        locationManager.delegate=self
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.requestLocation()
-        
+        checkLocationAuthorizationStatus()
+//        startTime = Date()
         
         searchTextField.delegate=self
         weatherManager.delegate=self
         
+    }
+    
+    @IBAction func locationButtonPressed(_ sender: Any) {
+//        startTime = Date()
+        checkLocationAuthorizationStatus()
+    }
+    
+    func checkLocationAuthorizationStatus() {
+        let status = locationManager.authorizationStatus
+        
+        switch status {
+                
+        case .authorizedAlways, .authorizedWhenInUse:
+//            print(".authorizedAlways, .authorizedWhenInUse")
+            startLocationUpdates()
+                
+        case .notDetermined:
+//            print(".notDetermined")
+
+            locationManager.delegate = self
+            locationManager.requestWhenInUseAuthorization()
+                
+        case .denied, .restricted:
+//            print(".denied, .restricted")
+            print("Location services denied or restricted.")
+                
+        @unknown default:
+            fatalError("A new case for CLLocationManager.authorizationStatus() is available.")
+        }
+    }
+
+    func startLocationUpdates() {
+        locationManager.delegate = self
+        locationManager.startUpdatingLocation()
     }
     
 }
@@ -64,6 +96,7 @@ extension ViewController:UITextFieldDelegate{
     
     
     func textFieldDidEndEditing(_ textField: UITextField) {
+        
         if let city=searchTextField.text{
             weatherManager.fetchWeather(cityname: city)
         }
@@ -78,12 +111,12 @@ extension ViewController:UITextFieldDelegate{
 extension ViewController:WeatherManagerDelegate{
     
     func didUpdateWeather(_ weatherManager: WeatherManager, weather: WeatherModel) {
-            DispatchQueue.main.async {
-                self.temperatureLabel.text = weather.temperatureString
-                self.weatherImage.image = UIImage(systemName: weather.conditionName)
-                self.locationLabel.text = weather.cityName
-            }
+        DispatchQueue.main.async {
+            self.temperatureLabel.text = weather.temperatureString
+            self.weatherImage.image = UIImage(systemName: weather.conditionName)
+            self.locationLabel.text = weather.cityName
         }
+    }
         
     func didFailWithError(error: Error) {
         print(error)
@@ -95,13 +128,29 @@ extension ViewController:WeatherManagerDelegate{
 
 extension ViewController:CLLocationManagerDelegate{
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+//        if let startTime = self.startTime {
+//            let timeTaken = Date().timeIntervalSince(startTime)
+//            print("Time taken to get location: \(timeTaken) seconds")
+//        }
         if let location=locations.last{
+            
             let lat = location.coordinate.latitude
             let lon = location.coordinate.longitude
-            print("Latitude -> \(lat) Longitude -> \(lon)")
+            weatherManager.fetchWeather(latitude: lat, longitude: lon)
+//            print("Latitude -> \(lat) Longitude -> \(lon)")
+            locationManager.stopUpdatingLocation()
+            locationManager.delegate = nil
         }
         
     }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+            if status == .authorizedAlways || status == .authorizedWhenInUse {
+                startLocationUpdates()
+            } else {
+                print("Location authorization status changed to \(status.rawValue)")
+            }
+        }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print(error)

@@ -14,10 +14,21 @@ protocol WeatherManagerDelegate {
 }
 
 struct WeatherManager{
-    let baseURL="https://api.openweathermap.org/data/2.5/weather?appid=38a9088d74fc06827a545f6a79961837&units=metric"
+    let baseURL="https://api.openweathermap.org/data/2.5/weather?"
+    let appID="&appid=38a9088d74fc06827a545f6a79961837&units=metric"
+//    let baseURL="https://api.openweathermap.org/data/2.5/weather?appid=38a9088d74fc06827a545f6a79961837&units=metric"
     var delegate: WeatherManagerDelegate?
+    
+    
     func fetchWeather(cityname:String){
-        let urlString="\(baseURL)&q=\(cityname)"
+        let urlString="\(baseURL)&q=\(cityname)\(appID)"
+//        print(urlString)
+        performRequest(urlString: urlString)
+    }
+    
+    func fetchWeather(latitude:CLLocationDegrees, longitude: CLLocationDegrees){
+        let urlString="\(baseURL)lat=\(latitude)&lon=\(longitude)\(appID)"
+//        print(urlString)
         performRequest(urlString: urlString)
     }
     
@@ -49,6 +60,7 @@ struct WeatherManager{
             let name = decodedData.name
             
             let weather = WeatherModel(conditionId: id, cityName: name, temperature: temp)
+//            print(weather)
             return weather
         }catch{
             delegate?.didFailWithError(error: error)

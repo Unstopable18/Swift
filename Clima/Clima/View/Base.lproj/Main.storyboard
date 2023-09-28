@@ -35,13 +35,16 @@
                                                 </constraints>
                                                 <color key="tintColor" name="FontColor"/>
                                                 <state key="normal" backgroundImage="location.circle.fill" catalog="system"/>
+                                                <connections>
+                                                    <action selector="locationButtonPressed:" destination="95P-3j-nhK" eventType="touchUpInside" id="d4p-qk-gAh"/>
+                                                </connections>
                                             </button>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="fSI-4P-ExF">
                                                 <rect key="frame" x="50" y="0.0" width="253" height="40"/>
                                                 <color key="backgroundColor" systemColor="systemFillColor"/>
                                                 <color key="textColor" name="FontColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <textInputTraits key="textInputTraits" returnKeyType="go"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="go"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hy0-yn-v0r">
                                                 <rect key="frame" x="313" y="0.99999999999999645" width="40" height="38.333333333333329"/>
@@ -119,7 +122,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="currentLocationButton" destination="nZD-fE-9We" id="LIf-4Q-S68"/>
                         <outlet property="locationLabel" destination="Pf7-nU-whc" id="k6k-6O-E5X"/>
                         <outlet property="searchButton" destination="hy0-yn-v0r" id="pfn-lc-oX3"/>
                         <outlet property="searchTextField" destination="fSI-4P-ExF" id="t6E-BE-cac"/>
