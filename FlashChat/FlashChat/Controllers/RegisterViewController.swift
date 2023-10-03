@@ -6,6 +6,7 @@
     //
 
 import UIKit
+import FirebaseAuth
 
 class RegisterViewController: UIViewController {
     
@@ -23,7 +24,16 @@ extension RegisterViewController:UITextFieldDelegate{
     @IBAction func RegisterButtonTapped(_ sender: Any) {
         emailTextField.endEditing(true)
         passwordTextField.endEditing(true)
-        performSegue(withIdentifier: "goToChatRegister", sender:nil)
+        if let email=emailTextField.text, let password=passwordTextField.text{
+            Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+                if let e = error {
+                    print("Error while registering -> \(e.localizedDescription)")
+                }else{
+                    self.performSegue(withIdentifier: Constants.registerSegue, sender:self)
+                }
+            }
+        }
+        
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

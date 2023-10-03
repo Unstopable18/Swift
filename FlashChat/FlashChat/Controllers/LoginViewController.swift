@@ -6,6 +6,7 @@
     //
 
 import UIKit
+import FirebaseAuth
 
 class LoginViewController: UIViewController{
     
@@ -23,7 +24,15 @@ extension LoginViewController:UITextFieldDelegate{
     @IBAction func LoginButtonTapped(_ sender: Any) {
         emailTextField.endEditing(true)
         passwordTextFIeld.endEditing(true)
-        performSegue(withIdentifier: "goToChatLogin", sender:nil)
+        if let email=emailTextField.text, let password=passwordTextFIeld.text{
+            Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+                if let e = error {
+                    print("Error while LogIn -> \(e.localizedDescription)")
+                }else{
+                    self.performSegue(withIdentifier: Constants.loginSegue, sender:self)
+                }
+            }
+        }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

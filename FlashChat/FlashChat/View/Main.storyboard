@@ -224,15 +224,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HGm-H4-eGz">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HGm-H4-eGz">
                                 <rect key="frame" x="0.0" y="92" width="414" height="710"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReusableCell" id="Utk-GT-PQP">
-                                        <rect key="frame" x="0.0" y="50" width="414" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ReusableCell" id="Utk-GT-PQP">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Utk-GT-PQP" id="ban-Kd-2Wr">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -291,7 +291,14 @@
                             <constraint firstItem="HGm-H4-eGz" firstAttribute="top" secondItem="k8X-1Y-uVK" secondAttribute="top" id="vLh-s2-1dr"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="ggF-Hh-gv7"/>
+                    <navigationItem key="navigationItem" id="ggF-Hh-gv7">
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" image="square.and.arrow.up.fill" catalog="system" id="UYp-fN-dCr">
+                            <color key="tintColor" name="BrandLightPurple"/>
+                            <connections>
+                                <action selector="logoutButtonTapped:" destination="sJe-ay-Jbl" id="2xL-GP-fYc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="messageTextField" destination="VfS-Ij-cW0" id="SJf-Cl-ybe"/>
                         <outlet property="tableView" destination="HGm-H4-eGz" id="cOO-sg-lOA"/>
@@ -325,7 +332,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⚡️FlashChat" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NYg-bQ-qNx" customClass="CLTypingLabel" customModule="CLTypingLabel">
-                                <rect key="frame" x="207" y="418" width="0.0" height="60"/>
+                                <rect key="frame" x="76" y="418" width="262" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="WEZ-Md-vOK"/>
                                 </constraints>
@@ -375,13 +382,16 @@
         </scene>
     </scenes>
     <designables>
-        <designable name="NYg-bQ-qNx"/>
+        <designable name="NYg-bQ-qNx">
+            <size key="intrinsicContentSize" width="262" height="54"/>
+        </designable>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="gdb-BU-pFa"/>
+        <segue reference="Bnh-y5-zN9"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="paperplane.fill" catalog="system" width="128" height="119"/>
+        <image name="square.and.arrow.up.fill" catalog="system" width="115" height="128"/>
         <image name="textfield" width="298" height="93"/>
         <namedColor name="BrandBlue">
             <color red="0.16500000655651093" green="0.77999997138977051" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
