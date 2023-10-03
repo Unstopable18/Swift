@@ -11,8 +11,9 @@
 		E7AC59D62ACBE6170054FDED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E7AC59D52ACBE6170054FDED /* GoogleService-Info.plist */; };
 		E7AC59D82ACBECC20054FDED /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AC59D72ACBECC20054FDED /* Constants.swift */; };
 		E7AC59DA2ACBEE910054FDED /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AC59D92ACBEE910054FDED /* Message.swift */; };
-		E7AC59DD2ACBFA970054FDED /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AC59DB2ACBFA970054FDED /* MessageCell.swift */; };
-		E7AC59DE2ACBFA970054FDED /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7AC59DC2ACBFA970054FDED /* MessageCell.xib */; };
+		E7AC59E12ACBFCA00054FDED /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AC59DF2ACBFCA00054FDED /* MessageCell.swift */; };
+		E7AC59E22ACBFCA00054FDED /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7AC59E02ACBFCA00054FDED /* MessageCell.xib */; };
+		E7AC59E52ACC3B5B0054FDED /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E7AC59E42ACC3B5B0054FDED /* IQKeyboardManagerSwift */; };
 		E7C540432AC6992700095661 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C540422AC6992700095661 /* AppDelegate.swift */; };
 		E7C540452AC6992700095661 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C540442AC6992700095661 /* SceneDelegate.swift */; };
 		E7C5404C2AC6992900095661 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7C5404B2AC6992900095661 /* Assets.xcassets */; };
@@ -31,8 +32,8 @@
 		E7AC59D52ACBE6170054FDED /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E7AC59D72ACBECC20054FDED /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E7AC59D92ACBEE910054FDED /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
-		E7AC59DB2ACBFA970054FDED /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
-		E7AC59DC2ACBFA970054FDED /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
+		E7AC59DF2ACBFCA00054FDED /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		E7AC59E02ACBFCA00054FDED /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 		E7C5403F2AC6992700095661 /* FlashChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlashChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7C540422AC6992700095661 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7C540442AC6992700095661 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +53,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3E1F10A3B8DAE9292646E09 /* Pods_FlashChat.framework in Frameworks */,
+				E7AC59E52ACC3B5B0054FDED /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,8 +135,8 @@
 			children = (
 				E7C5404D2AC6992900095661 /* LaunchScreen.storyboard */,
 				E7C540632AC69B0F00095661 /* Main.storyboard */,
-				E7AC59DB2ACBFA970054FDED /* MessageCell.swift */,
-				E7AC59DC2ACBFA970054FDED /* MessageCell.xib */,
+				E7AC59DF2ACBFCA00054FDED /* MessageCell.swift */,
+				E7AC59E02ACBFCA00054FDED /* MessageCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -157,6 +159,9 @@
 			dependencies = (
 			);
 			name = FlashChat;
+			packageProductDependencies = (
+				E7AC59E42ACC3B5B0054FDED /* IQKeyboardManagerSwift */,
+			);
 			productName = FlashChat;
 			productReference = E7C5403F2AC6992700095661 /* FlashChat.app */;
 			productType = "com.apple.product-type.application";
@@ -185,6 +190,9 @@
 				Base,
 			);
 			mainGroup = E7C540362AC6992700095661;
+			packageReferences = (
+				E7AC59E32ACC3B5B0054FDED /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+			);
 			productRefGroup = E7C540402AC6992700095661 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -199,7 +207,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7AC59DE2ACBFA970054FDED /* MessageCell.xib in Resources */,
+				E7AC59E22ACBFCA00054FDED /* MessageCell.xib in Resources */,
 				E7C540642AC69B0F00095661 /* Main.storyboard in Resources */,
 				E7AC59D62ACBE6170054FDED /* GoogleService-Info.plist in Resources */,
 				E7C5404F2AC6992900095661 /* LaunchScreen.storyboard in Resources */,
@@ -264,7 +272,7 @@
 				E7AC59DA2ACBEE910054FDED /* Message.swift in Sources */,
 				E7AC59D82ACBECC20054FDED /* Constants.swift in Sources */,
 				E7C540692AC6BBAD00095661 /* RegisterViewController.swift in Sources */,
-				E7AC59DD2ACBFA970054FDED /* MessageCell.swift in Sources */,
+				E7AC59E12ACBFCA00054FDED /* MessageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,6 +489,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E7AC59E32ACC3B5B0054FDED /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.13;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E7AC59E42ACC3B5B0054FDED /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E7AC59E32ACC3B5B0054FDED /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E7C540372AC6992700095661 /* Project object */;
 }
