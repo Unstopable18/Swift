@@ -34,11 +34,11 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label s sfd fsd fsf sdf sdf sdf sdf sdf sdf sd fsdf sdfs dfsdf sdf sdf sd sd fsdf sdfs fs s dfsd sdf" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRY-hU-sak">
                                         <rect key="frame" x="10" y="10" width="313" height="80"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" name="BrandPurple"/>
+                                        <color key="textColor" name="BrandLightBlue"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" name="BrandLightPurple"/>
+                                <color key="backgroundColor" name="BrandBlue"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="MRY-hU-sak" secondAttribute="bottom" constant="10" id="IgD-JC-8bl"/>
                                     <constraint firstAttribute="trailing" secondItem="MRY-hU-sak" secondAttribute="trailing" constant="10" id="SyL-MP-24U"/>
@@ -56,6 +56,7 @@
                         </subviews>
                     </stackView>
                 </subviews>
+                <color key="backgroundColor" name="BgPurple"/>
                 <constraints>
                     <constraint firstItem="THK-fc-dTR" firstAttribute="top" secondItem="pl8-Df-daM" secondAttribute="top" constant="10" id="3bV-Hv-pFR"/>
                     <constraint firstItem="THK-fc-dTR" firstAttribute="leading" secondItem="pl8-Df-daM" secondAttribute="leading" constant="10" id="E7Y-jk-GdG"/>
@@ -76,11 +77,14 @@
     <resources>
         <image name="MeAvatar" width="36" height="36"/>
         <image name="YouAvatar" width="36" height="36"/>
-        <namedColor name="BrandLightPurple">
-            <color red="0.16500000655651093" green="0.11500000208616257" blue="0.23199999332427979" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        <namedColor name="BgPurple">
+            <color red="0.77194555378177909" green="0.70590794428788484" blue="0.90698933724275566" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
-        <namedColor name="BrandPurple">
-            <color red="0.43999999761581421" green="0.30799999833106995" blue="0.61699998378753662" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        <namedColor name="BrandBlue">
+            <color red="0.083999998867511749" green="0.17299999296665192" blue="0.2199999988079071" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="BrandLightBlue">
+            <color red="0.16500000655651093" green="0.77999997138977051" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

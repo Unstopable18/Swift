@@ -77,7 +77,7 @@ extension ChatViewController:UITextFieldDelegate{
     
     @IBAction func SendButtonTapped(_ sender: Any) {
         
-        print("Send Button Tapped")
+//        print("Send Button Tapped")
         messageTextField.endEditing(true)
         if let messageBody=messageTextField.text, let messageSender=Auth.auth().currentUser?.email{
             var ref: DocumentReference? = nil
@@ -90,7 +90,7 @@ extension ChatViewController:UITextFieldDelegate{
                     print("Error adding document: \(err)")
                 } else {
                     self.messageTextField.text = ""
-                    print("Document added with ID: \(ref!.documentID)")
+//                    print("Document added with ID: \(ref!.documentID)")
                 }
             }
             
@@ -142,8 +142,8 @@ extension ChatViewController:UITableViewDataSource{
         else {
             cell.leftImageView.isHidden = false
             cell.rightImageView.isHidden = true
-            cell.MessageBubble.backgroundColor = UIColor(named: Constants.BrandColors.purple)
-            cell.messageLabel.textColor = UIColor(named: Constants.BrandColors.lightPurple)
+            cell.MessageBubble.backgroundColor = UIColor(named: Constants.BrandColors.blue)
+            cell.messageLabel.textColor = UIColor(named: Constants.BrandColors.lightBlue)
         }
         
       

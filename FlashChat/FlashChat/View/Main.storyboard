@@ -7,7 +7,6 @@
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -82,7 +81,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="iBr-te-E5a"/>
-                        <color key="backgroundColor" name="BrandPurple"/>
+                        <color key="backgroundColor" name="BgPurple"/>
                         <constraints>
                             <constraint firstItem="twV-lF-g3x" firstAttribute="top" secondItem="yPi-OB-leV" secondAttribute="bottom" id="3xW-ai-hdq"/>
                             <constraint firstItem="yPi-OB-leV" firstAttribute="leading" secondItem="iBr-te-E5a" secondAttribute="leading" id="EFg-RR-5mf"/>
@@ -113,6 +112,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5jm-Ba-elX">
                         <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -193,7 +193,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MOn-7y-Cwc"/>
-                        <color key="backgroundColor" name="BrandLightBlue"/>
+                        <color key="backgroundColor" name="BgBlue"/>
                         <constraints>
                             <constraint firstItem="EpU-ZV-0mb" firstAttribute="trailing" secondItem="MOn-7y-Cwc" secondAttribute="trailing" id="0BL-yv-gni"/>
                             <constraint firstItem="Qfw-5z-miu" firstAttribute="trailing" secondItem="MOn-7y-Cwc" secondAttribute="trailing" id="fUm-XC-AwV"/>
@@ -224,20 +224,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HGm-H4-eGz">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HGm-H4-eGz">
                                 <rect key="frame" x="0.0" y="92" width="414" height="710"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="BgPurple"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="EtM-bW-gLS">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EtM-bW-gLS" id="e8N-w5-db8">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uJR-tp-r02">
                                 <rect key="frame" x="0.0" y="802" width="414" height="60"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write a message..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VfS-Ij-cW0">
                                         <rect key="frame" x="20" y="20" width="314" height="40"/>
-                                        <color key="backgroundColor" name="BrandLightPurple"/>
+                                        <color key="backgroundColor" name="BrandPurple"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="RP1-Bs-DVz"/>
                                         </constraints>
-                                        <color key="textColor" name="BrandPurple"/>
+                                        <color key="textColor" name="BrandLightPurple"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -258,7 +268,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" name="BrandPurple"/>
+                                <color key="backgroundColor" name="BgPurple"/>
                                 <constraints>
                                     <constraint firstItem="fCC-I1-OLk" firstAttribute="leading" secondItem="VfS-Ij-cW0" secondAttribute="trailing" constant="20" id="7oC-BJ-swe"/>
                                     <constraint firstItem="VfS-Ij-cW0" firstAttribute="top" secondItem="uJR-tp-r02" secondAttribute="top" constant="20" id="Ala-Ez-oIB"/>
@@ -270,7 +280,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="k8X-1Y-uVK"/>
-                        <color key="backgroundColor" name="BrandPurple"/>
+                        <color key="backgroundColor" name="BgPurple"/>
                         <constraints>
                             <constraint firstItem="uJR-tp-r02" firstAttribute="top" secondItem="HGm-H4-eGz" secondAttribute="bottom" id="7as-CW-gV9"/>
                             <constraint firstItem="HGm-H4-eGz" firstAttribute="trailing" secondItem="k8X-1Y-uVK" secondAttribute="trailing" id="Kf9-Dw-q6f"/>
@@ -348,7 +358,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6sn-Ec-1hQ"/>
-                        <color key="backgroundColor" name="BrandLightBlue"/>
+                        <color key="backgroundColor" name="BgBlue"/>
                         <constraints>
                             <constraint firstItem="pdR-lI-xtD" firstAttribute="leading" secondItem="6sn-Ec-1hQ" secondAttribute="leading" constant="10" id="88B-VI-nIe"/>
                             <constraint firstItem="NYg-bQ-qNx" firstAttribute="centerY" secondItem="xTI-Fb-dNc" secondAttribute="centerY" id="AYd-59-CRW"/>
@@ -383,8 +393,14 @@
         <image name="paperplane.fill" catalog="system" width="128" height="119"/>
         <image name="square.and.arrow.up.fill" catalog="system" width="115" height="128"/>
         <image name="textfield" width="298" height="93"/>
+        <namedColor name="BgBlue">
+            <color red="0.69378567552100368" green="0.85952301730582625" blue="0.98009594998408844" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="BgPurple">
+            <color red="0.77194555378177909" green="0.70590794428788484" blue="0.90698933724275566" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <namedColor name="BrandBlue">
-            <color red="0.16500000655651093" green="0.77999997138977051" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.083999998867511749" green="0.17299999296665192" blue="0.2199999988079071" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="BrandLightBlue">
             <color red="0.083999998867511749" green="0.17299999296665192" blue="0.2199999988079071" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -395,8 +411,5 @@
         <namedColor name="BrandPurple">
             <color red="0.43999999761581421" green="0.30799999833106995" blue="0.61699998378753662" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
